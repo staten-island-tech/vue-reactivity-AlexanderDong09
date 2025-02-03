@@ -1,8 +1,9 @@
-<script setup></script>
+<script setup>
+import AstronomyItems from '../components/AstronomyItems.vue'
+</script>
 
 <template>
   <main>
-    <TheWelcome />
     <h1 class="text-5xl font-bold underline text-blue-600">Hello world!</h1>
     <div class="card bg-base-100 w-96 shadow-xl">
       <figure>
@@ -19,5 +20,6 @@
         </div>
       </div>
     </div>
+    <AstronomyItems />
   </main>
 </template>

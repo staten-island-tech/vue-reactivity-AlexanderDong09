@@ -5,14 +5,12 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="welcom" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/favorites">Favorites!</RouterLink>
       </nav>
     </div>
   </header>
@@ -22,20 +20,26 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <style scoped>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  top: 0;
+  left: auto;
+  right: a;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 2px solid var(--color-border);
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 1rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 
 nav a.router-link-exact-active {
@@ -56,7 +60,11 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
+main {
+  padding-top: 80px;
+}
+
+/* @media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
@@ -81,5 +89,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>
