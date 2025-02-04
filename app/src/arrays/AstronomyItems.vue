@@ -5,6 +5,8 @@
 </template>
 
 <script setup>
+import AstronomyCards from '@/components/AstronomyCards.vue'
+
 const astronomyObjects = [
   {
     name: 'WR 124',
