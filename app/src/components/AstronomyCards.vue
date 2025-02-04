@@ -15,12 +15,13 @@ defineProps({
 
 <style scoped>
 .astronomy-card {
-  border: 1px solid #ccc;
+  border: 1px solid;
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
   text-align: center;
   width: 200px;
+  background-color: aliceblue;
 }
 
 .astronomy-card img {

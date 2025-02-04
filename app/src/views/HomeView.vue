@@ -6,6 +6,6 @@ import AstronomyCards from '@/components/AstronomyCards.vue'
 <template>
   <main>
     <h1 class="text-5xl font-bold underline text-blue-600">Hello world!</h1>
-    <AstronomyCards />
+    <AstronomyItems />
   </main>
 </template>
