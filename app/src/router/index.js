@@ -22,6 +22,12 @@ const router = createRouter({
       name: 'store',
       component: () => import('../views/StoreView.vue'),
     },
+    {
+      path: '/about/:name',
+      name: 'about',
+      component: () => import('../views/ObjectDetails.vue'),
+      props: true,
+    },
   ],
 })
 

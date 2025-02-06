@@ -61,6 +61,6 @@ nav a:first-of-type {
 }
 
 main {
-  padding-top: 80.1px;
+  padding-top: 25px;
 }
 </style>

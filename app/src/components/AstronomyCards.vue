@@ -15,17 +15,29 @@ defineProps({
 
 <style scoped>
 .astronomy-card {
-  border: 1px solid;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-  width: 200px;
-  background-color: aliceblue;
+  width: 25%;
+  border: solid;
+  border-radius: 30px;
+  border-color: var(--secondary);
+  margin: 4rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .astronomy-card img {
   max-width: 100%;
-  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  object-fit: contain;
+  margin: 10px;
+}
+
+.astronomy-card img :hover {
+  transform: scale(1.5); /* Scale up the card by 5% when hovered */
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2 v-for="object in astronomyObjects" :key="object.name">{{ object.name }}</h2>
+  <div class="card-container">
+    <!-- <h2 v-for="object in astronomyObjects" :key="object.name">{{ object.name }}</h2> -->
     <AstronomyCards
       v-for="object in astronomyObjects"
       :key="object.name"
@@ -155,7 +155,7 @@ const astronomyObjects = [
     name: 'R136',
     distanceLightYears: 158200,
     type: 'Star Cluster',
-    imageURL: '/tarantula.jpg',
+    imageURL: '/R136.jpg',
     altText:
       'A Hubble Space Telescope image of the R136 star cluster in ultraviolet, visible, and red light.',
     discoveryYear: 1960,
@@ -250,4 +250,10 @@ const astronomyObjects = [
 ]
 </script>
 
-<style scoped></style>
+<style scoped>
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+</style>
