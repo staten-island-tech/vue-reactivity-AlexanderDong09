@@ -1,7 +1,7 @@
 <template>
   <div class="astronomy-card">
     <h1>{{ name }}</h1>
-    <img :src="imageURL" :alt="altText" />
+    <img :src="imageURL" :alt="altText" @click="goToAboutPage(name)" style="cursor: pointer" />
   </div>
 </template>
 
@@ -11,6 +11,14 @@ defineProps({
   imageURL: String,
   altText: String,
 })
+
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const goToAboutPage = (name) => {
+  router.push({ name: 'about', params: { name: name } })
+}
 </script>
 
 <style scoped>
