@@ -1,7 +1,11 @@
 <template>
   <div>
     <div v-if="objectDetails">
-      <h1 class="text-7xl text-center">{{ objectDetails.name }}</h1>
+      <div class="title-container">
+        <h1 class="text-7xl text-center">{{ objectDetails.name }}</h1>
+        <button class="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600">Click Me</button>
+      </div>
+
       <img :src="objectDetails.imageURL" :alt="objectDetails.name" />
       <h3>Type of Object: {{ objectDetails.type }}</h3>
       <h4>
@@ -34,7 +38,15 @@ div {
   flex-direction: column;
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
-  min-height: 100vh; /* Make sure it takes at least the full height of the viewport */
   text-align: center; /* Center text */
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Aligns text and button at the top */
+  justify-content: center; /* Centers them horizontally */
+  gap: 20px; /* Space between the heading and button */
+  height: auto; /* Ensures the container is only as tall as the content */
 }
 </style>
