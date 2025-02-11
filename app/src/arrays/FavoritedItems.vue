@@ -5,7 +5,7 @@
 <script setup>
 import { reactive } from 'vue'
 
-export const favObjects = reactive([])
+const favObjects = reactive([])
 </script>
 
 <style scoped></style>

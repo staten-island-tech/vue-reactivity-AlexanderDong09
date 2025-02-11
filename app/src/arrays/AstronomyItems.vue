@@ -1,6 +1,5 @@
 <template>
   <div class="card-container">
-    <!-- <h2 v-for="object in astronomyObjects" :key="object.name">{{ object.name }}</h2> -->
     <AstronomyCards
       v-for="object in astronomyObjects"
       :key="object.name"

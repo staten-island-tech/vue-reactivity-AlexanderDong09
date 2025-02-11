@@ -5,4 +5,8 @@
   </div>
 </template>
 
+<script setup>
+import favObjects from '@/arrays/FavoritedItems.vue'
+</script>
+
 <style></style>
