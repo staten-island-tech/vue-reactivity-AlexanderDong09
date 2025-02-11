@@ -3,12 +3,7 @@
     <div v-if="objectDetails">
       <div class="title-container">
         <h1 class="text-7xl text-center">{{ objectDetails.name }}</h1>
-        <button
-          class="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600"
-          @click="favoriteObject"
-        >
-          Click Me
-        </button>
+        <FavoriteButton :object="objectDetails" />
       </div>
 
       <img :src="objectDetails.imageURL" :alt="objectDetails.name" />
@@ -29,16 +24,12 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { astronomyObjects } from '@/arrays/objects.js'
-import favObjects from '@/arrays/FavoritedItems.vue'
+import FavoriteButton from '@/components/FavoriteButton.vue'
 
 const route = useRoute()
 
 const objectDetails = computed(() => {
   return astronomyObjects.find((obj) => obj.name === route.params.name)
-})
-
-const favoriteObject = computed(() => {
-  astronomyObjects.find((obj) => obj.name.append(favObjects))
 })
 </script>
 

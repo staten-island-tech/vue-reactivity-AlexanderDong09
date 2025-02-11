@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import favObjects from '@/arrays/FavoritedItems.vue'
+import favObjects from '@/arrays/favObjects'
 </script>
 
 <style></style>
