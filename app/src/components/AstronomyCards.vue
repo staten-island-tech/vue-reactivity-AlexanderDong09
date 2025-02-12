@@ -1,7 +1,7 @@
 <template>
   <div class="astronomy-card">
     <h1>{{ name }}</h1>
-    <img :src="imageURL" :alt="altText" @click="goToAboutPage(name)" style="cursor: pointer" />
+    <img :src="imageURL" :alt="altText" @click="goToAboutPage(name)" class="cursor-pointer" />
   </div>
 </template>
 

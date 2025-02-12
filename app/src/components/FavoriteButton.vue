@@ -1,28 +1,29 @@
 <template>
   <div>
-    <button class="cursor-pointer" @click="toggleFavorite">unfavor</button>
-
-    <!--
-        <button
-      class="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600"
+    <button
+      class="bg-blue-500 p-2 rounded text-center cursor-pointer transition-all hover:scale-105 active:scale-95"
       @click="toggleFavorite"
     >
-      Click Me
+      {{ data ? 'Unfavorite' : 'Favorite' }}
     </button>
-    
-    -->
   </div>
 </template>
 
 <script setup>
-import { favObjects } from '@/arrays/favObjects'
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
+import { defineEmits } from 'vue'
 
 const obj = defineProps({
   object: Object,
 })
 
-function toggleFavorite() {}
+const data = ref(obj.object.isFavorited)
+const eventEmitters = defineEmits(['toggleFavoriter'])
+
+function toggleFavorite() {
+  eventEmitters('toggleFavoriter')
+  data.value = !data.value
+}
 </script>
 
 <style scoped></style>

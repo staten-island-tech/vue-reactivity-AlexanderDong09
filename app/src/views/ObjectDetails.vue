@@ -3,7 +3,7 @@
     <div v-if="objectDetails">
       <div class="title-container">
         <h1 class="text-7xl text-center">{{ objectDetails.name }}</h1>
-        <FavoriteButton :object="objectDetails" />
+        <FavoriteButton :object="objectDetails" @toggleFavoriter="handleToggleFavorite" />
       </div>
 
       <img :src="objectDetails.imageURL" :alt="objectDetails.name" />
@@ -31,6 +31,10 @@ const route = useRoute()
 const objectDetails = computed(() => {
   return astronomyObjects.find((obj) => obj.name === route.params.name)
 })
+
+function handleToggleFavorite() {
+  objectDetails.value.isFavorited = !objectDetails.value.isFavorited
+}
 </script>
 
 <style scoped>
