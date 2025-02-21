@@ -4,6 +4,7 @@
 #app {
   font-weight: normal;
   background-image: url(/bg.jpg);
+  background-repeat: inherit;
   min-height: max-content;
 }
 
