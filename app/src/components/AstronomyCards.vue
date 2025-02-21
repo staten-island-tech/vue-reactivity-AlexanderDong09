@@ -35,6 +35,7 @@ const goToAboutPage = (name) => {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
+  background-color: rgba(2, 37, 26, 0.644);
 }
 
 .astronomy-card img {
